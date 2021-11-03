@@ -6,12 +6,9 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('cat README'){
-         when {
-           branch "dev-*"
-         }
+        stage('new'){
          steps {
-           sh 'cat README.md'
+           sh 'cat README.md>/tmp/y'
 }
 }
     }
